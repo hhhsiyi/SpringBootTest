@@ -11,6 +11,15 @@
 
     <artifactId>springcloud-provider-dept-8001</artifactId>
     <dependencies>
+        <!--        SpringBoot2.x之后建议用Netflix的eureka-->
+        <dependency>
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-netflix-eureka</artifactId>-->
+<!--            <version>3.0.2</version>-->
+                        <groupId>org.springframework.cloud</groupId>
+                        <artifactId>spring-cloud-starter-eureka-server</artifactId>
+                        <version>1.4.7.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>com.hewen</groupId>
             <artifactId>springcloud-api</artifactId>
