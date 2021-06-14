@@ -13,7 +13,8 @@
 
  Date: 04/05/2021 21:07:29
 */
-
+/*需要创建一个db01的*/
+use db01;
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
