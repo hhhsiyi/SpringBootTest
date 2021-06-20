@@ -1,2 +1,11 @@
 server:
   port: 8002
+
+#Eureka配置
+#服务注册到哪里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: 何文大沙雕2 #修改默认的描述

@@ -32,3 +32,15 @@ spring:
 #    prefer-ip-address: false #是否将ip也注册到eurekaServer上
 #    lease-renewal-interval-in-seconds: 10 #客户端发送心跳的频率
 #    lease-expiration-duration-in-seconds: 30 #告诉服务端我多少秒之内没发心跳就移除我的服务
+# info信息
+info:
+  app.name: ${spring.application.name}
+  company.name: hewencpy
+# 健康检查
+management:
+  server:
+    port: 12138
+  endpoints:
+    web:
+      exposure:
+        include: "*"
