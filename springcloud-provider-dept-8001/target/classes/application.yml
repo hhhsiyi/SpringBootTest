@@ -34,7 +34,7 @@ spring:
 #    lease-expiration-duration-in-seconds: 30 #告诉服务端我多少秒之内没发心跳就移除我的服务
 # info信息
 info:
-  app.name: ${spring.application.name}
+  app.name: ${spring.application.name!}
   company.name: hewencpy
 # 健康检查
 management:

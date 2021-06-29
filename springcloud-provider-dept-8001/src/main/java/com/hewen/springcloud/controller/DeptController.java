@@ -3,6 +3,7 @@ package com.hewen.springcloud.controller;
 import com.hewen.springcloud.pojo.Dept;
 import com.hewen.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -39,5 +40,17 @@ public class DeptController {
     @GetMapping("/dept/queryAll")
     public List<Dept> queryAll() {
         return deptService.queryAll();
+    }
+
+    @Autowired//用来获取一些注册中心的信息
+    private DiscoveryClient discoveryClient;
+
+    @RequestMapping("/dept/t1")
+    public Object discovery() {
+        //获取微服务列表清单
+        //一般自动注册注册接口就行
+        List<String> services = discoveryClient.getServices();
+        System.out.println("discovery->" + services);
+        return services;
     }
 }

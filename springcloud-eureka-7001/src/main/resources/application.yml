@@ -14,3 +14,5 @@ eureka:
     #public EurekaClientConfigBean() {
     #        this.serviceUrl.put("defaultZone", "http://localhost:8761/eureka/");
     #默认就把上面的替换掉了，约定大于配置
+  server:
+    enable-self-preservation: true

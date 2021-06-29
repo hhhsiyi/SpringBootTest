@@ -13,19 +13,19 @@
     <dependencies>
         <!--        SpringBoot2.x之后建议用Netflix的eureka-->
         <dependency>
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-netflix-eureka</artifactId>-->
-<!--            <version>3.0.2</version>-->
-                        <groupId>org.springframework.cloud</groupId>
-                        <artifactId>spring-cloud-starter-eureka-server</artifactId>
-                        <version>1.4.7.RELEASE</version>
+            <!--            <groupId>org.springframework.cloud</groupId>-->
+            <!--            <artifactId>spring-cloud-starter-netflix-eureka</artifactId>-->
+            <!--            <version>3.0.2</version>-->
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <version>1.4.7.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>com.hewen</groupId>
             <artifactId>springcloud-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-<!--        首先我们要拿到实体类，我们需要拿到我们自己写的东西-->
+        <!--        首先我们要拿到实体类，我们需要拿到我们自己写的东西-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -47,7 +47,7 @@
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
-<!--        test,为什么不写版本也可以，因为之前SpringBoot启动器里有默认的版本-->
+        <!--        test,为什么不写版本也可以，因为之前SpringBoot启动器里有默认的版本-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-test</artifactId>
@@ -56,17 +56,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-<!--        jetty-->
+        <!--        jetty-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
-<!--        热部署-->
+        <!--        热部署-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
-<!--        完善监控信息-->
+        <!--        完善监控信息-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
