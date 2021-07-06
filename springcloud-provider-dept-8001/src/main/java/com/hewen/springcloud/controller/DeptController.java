@@ -3,6 +3,7 @@ package com.hewen.springcloud.controller;
 import com.hewen.springcloud.pojo.Dept;
 import com.hewen.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -51,6 +52,15 @@ public class DeptController {
         //一般自动注册注册接口就行
         List<String> services = discoveryClient.getServices();
         System.out.println("discovery->" + services);
-        return services;
+        //获取一个具体的微服务信息,通过applicationname去拿
+        List<ServiceInstance> instances = discoveryClient.getInstances("SPRINGCLOUD-PROVIDER-DEPT");
+        for (ServiceInstance instance : instances
+        ) {
+            System.out.println(instance.getHost()+" "
+                    +instance.getPort()+" "
+                    +instance.getUri()+" "
+            +instance.getServiceId());
+        }
+        return this.discoveryClient;
     }
 }
