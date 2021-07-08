@@ -1,4 +1,4 @@
-package com.hewen;
+package com.hewen.config;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -35,12 +35,12 @@ public class HelloWorldJobConfig {
     @Bean
     public Job helloWorldJob() {
         return jobBuilderFactory.get("helloWorldJob")
-                .start(step1())//任务去执行step1
+                .start(step10())//任务去执行step1
                 .build();
     }
-
-    public Step step1() {//创建了一个step，让helloWorldJob任务去执行step
-        return stepBuilderFactory.get("step1")
+    @Bean
+    public Step step10() {//创建了一个step，让helloWorldJob任务去执行step
+        return stepBuilderFactory.get("step10")
                 .tasklet(new Tasklet() {
                     //两种不同的生成方式
                     @Override
