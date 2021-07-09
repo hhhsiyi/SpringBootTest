@@ -5,7 +5,6 @@ my:
       username: root
       password: 19980928
       driver-class-name: com.mysql.cj.jdbc.Driver
-
 spring:
   datasource:
     username: root
@@ -17,3 +16,9 @@ spring:
   batch:
     initialize-schema: always
     name1: 1231
+    job:
+      names: parentJob,flowDemoJob #配置要启动的job名称，   逗号分隔
+logging:
+#  level: info
+  file:
+    name: ./logs/application.log
