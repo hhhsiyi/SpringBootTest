@@ -14,6 +14,7 @@
         <module>springcloud-eureka-7001</module>
         <module>springcloud-nacos-8848</module>
         <module>SpringBatch</module>
+        <module>MyBatis</module>
     </modules>
 
 

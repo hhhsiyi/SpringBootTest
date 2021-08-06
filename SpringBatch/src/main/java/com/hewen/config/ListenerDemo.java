@@ -11,9 +11,13 @@ import org.springframework.batch.core.configuration.annotation.JobBuilderFactory
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
+import org.springframework.batch.item.support.ListItemReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * 2021/7/8
@@ -33,32 +37,43 @@ public class ListenerDemo {
     @Bean
     public Job listenerJob() {
         return jobBuilderFactory.get("listenerJob")
-                .start(step1())
+                .start(stept())
                 .listener(new MyJobListener())
                 .build();
     }
 
-    private Step step1() {
+    @Bean
+    public Step stept() {
         logger.info("testLog");
-        stepBuilderFactory.get("step1")
-                .<String,String>chunk(20)//类似切片频率,可以读取和写入数据
+        return stepBuilderFactory.get("stept")
+                .<String, String>chunk(2)//类似切片频率,可以读取和写入数据
                 .faultTolerant() //容错
                 .listener(new MyChunkListener())
                 .reader(read())
                 .writer(write())
                 .build();
-        return null;
+
     }
-    private ItemWriter<String> write() {
-        return null;
+
+    @Bean
+    public ItemWriter<String> write() {
+        return new ItemWriter<String>() {
+            @Override
+            public void write(List<? extends String> items) throws Exception {
+                for (String item :
+                        items) {
+                    System.out.println(item);
+                }
+            }
+        };
     }
-//    private ItemWriter<? super Object> write() {
+
+    //    private ItemWriter<? super Object> write() {
 //        return null;
 //    }
-
-    private ItemReader<String> read() {
-return null;
-
+    @Bean
+    public ItemReader<String> read() {
+        return new ListItemReader<>(Arrays.asList("java", "spring", "mybatis"));
     }
 
 }
