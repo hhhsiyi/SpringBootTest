@@ -20,12 +20,18 @@ public class UserDaoTest {
         SqlSession sqlSession = MyBatisUtils.getSqlSession();
         //获得SqlSession对象
         //执行SQL
+        //方法1：getMapper
+
         UserDao userDao = sqlSession.getMapper(UserDao.class);
+        List<User> userList = userDao.getUserList();
+        //方法2：全限定名再强转
+        //List<User> userList = sqlSession.selectList("com.hewen.dao.UserDao.getUserList");
+
         //getMapper相当于去找dao的实现，
         //因为dao和mapperxml绑定了所以就有了联系
         //本来应该去拿实现的，但是面向接口编程
         //底层是动态代理，只要点class必反射
-        List<User> userList = userDao.getUserList();
+
         for (User user : userList) {
             System.out.println(user);
         }
