@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--    mybatis默认的事务管理器是jdbc，默认的连接池是pooled-->
+    <!--    properties在加载的过程中就会读取，所以一定要放在最上方-->
+    <!--    <properties></properties>-->
+    <properties resource="db.properties"/>
+    <!--    引入外部配置文件，但是也可以自定义配置属性，但是如果出现同名情况，会优先使用外部配置文件-->
+    <!--    引入外部配置文件，如果外部文件没有，才会使用自定义的-->
+    <typeAliases>
+<!--        <typeAlias alias="user" type="com.hewen.pojo.User"/>-->
+        <package name="com.hewen.pojo"/>
+<!--        用了包名，直接就去扫描实体类了，不需要起别名，自己已经起好了-->
+    </typeAliases>
+    <environments default="development">
+        <!--        尽管可以配置多个环境，但每个 SqlSessionFactory 实例只能选择一种环境。-->
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <!--            事务管理器（transactionManager）-->
+            <!--            JDBC – 这个配置直接使用了 JDBC 的提交和回滚设施，它依赖从数据源获得的连接来管理事务作用域。-->
+            <!--            MANAGED – 这个配置几乎没做什么。-->
+            <dataSource type="POOLED">
+                <!--                数据源（dataSource）-->
+                <!--                UNPOOLED– 这个数据源的实现会每次请求时打开和关闭连接。-->
+                <!--                POOLED– 这种数据源的实现利用“池”的概念将 JDBC 连接对象组织起来，避免了创建新的连接实例时所必需的初始化和认证时间。-->
+                <!--                连接池是，用完可以回收的，能使并发 Web 应用快速响应请求。-->
+                <!--                <property name="driver" value="${driver}"/>-->
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+        <environment id="test">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--    <mappers>-->
+    <!--        <mapper resource="com/hewen/com.hewen.dao/UserMapper.xml"/>-->
+    <!--        &lt;!&ndash;        <mapper resource="org/mybatis/example/BlogMapper.xml"/>&ndash;&gt;-->
+    <!--    </mappers>-->
+    <!--    org.apache.ibatis.binding.BindingException: Type interface com.hewen.com.hewen.dao.UserMapper is not known to the MapperRegistry.
+    -->
+    <!--    每一个mapper.xml都需要在Mybatis核心配置文件中注册-->
+    <mappers>
+<!--                <mapper url="com.hewen.com.hewen.dao.UserMapper"/>-->
+        <mapper resource="UserMapper.xml"/>
+<!--        <mapper class="com.hewen.dao.UserDao"/>-->
+    </mappers>
+
+</configuration>
