@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -63,4 +64,19 @@ public class DeptController {
         }
         return this.discoveryClient;
     }
+    @RequestMapping("/testRest")
+    public String t(){
+        System.out.println("1");
+        return "2";
+    }
+    @Autowired
+    private RestTemplate restTemplate;
+    @RequestMapping("/testRest2")
+    public void tt(){
+        String url ="http://localhost:8001/testRest";
+        String url2="http://SPRINGCLOUD-PROVIDER-DEPT/testRest";
+        String forObject = (String)restTemplate.getForObject(url2,String.class);
+        System.out.println("\n"+forObject);
+    }
+
 }
