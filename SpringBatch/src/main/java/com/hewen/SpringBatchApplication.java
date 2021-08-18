@@ -15,7 +15,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 //@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @SpringBootApplication
-//@ComponentScan("com.hewen.config")
+//@ComponentScan("com.com.hewen.config")
 public class SpringBatchApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBatchApplication.class, args);

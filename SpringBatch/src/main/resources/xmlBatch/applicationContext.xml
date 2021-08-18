@@ -20,7 +20,7 @@
     <!--<context:annotation-config />-->
 
     <!-- 扫描@Component, @Repository,@Service,@Controller注解的bean，实例化成spring的bean。已经实现了annotation-config的功能 -->
-    <context:component-scan base-package="com.hewen.xmlBatch" />
+    <context:component-scan base-package="com.com.hewen.xmlBatch" />
 
     <import resource="spring-data.xml"/>
     <import resource="spring-batch.xml"/>

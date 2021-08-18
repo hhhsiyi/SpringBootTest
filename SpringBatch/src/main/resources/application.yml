@@ -20,7 +20,7 @@ spring:
       names: listenerJob,parameterJob
       # parentJob,flowDemoJob,listenerJob #配置要启动的job名称，   逗号分隔
   profiles:
-    include: hewen
+    include: com.hewen
 logging:
 #  level: info
   file:

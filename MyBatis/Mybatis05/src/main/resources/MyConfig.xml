@@ -15,7 +15,7 @@
         <setting name="logImpl" value="LOG4J"/>
     </settings>
     <typeAliases>
-        <typeAlias alias="user1" type="com.com.hewen.pojo.User1"/>
+        <typeAlias alias="user1" type="com.hewen.pojo.User1"/>
 <!--        <package name="com.com.hewen.pojo"/>-->
 <!--        用了包名，直接就去扫描实体类了，不需要起别名，自己已经起好了-->
     </typeAliases>
@@ -57,7 +57,9 @@
     <!--    每一个mapper.xml都需要在Mybatis核心配置文件中注册-->
     <mappers>
 <!--                <mapper url="com.com.hewen.com.com.hewen.dao.UserMapper"/>-->
-        <mapper resource="UserMapper.xml"/>
+<!--        <mapper resource="UserMapper.xml"/>-->
+<!--        如果换成SQL写在接口那里，就要变成绑定接口-->
+        <mapper class="com.hewen.mapper.UserMapper"/>
 <!--        <mapper class="com.com.hewen.dao.UserDao"/>-->
     </mappers>
 

@@ -23,8 +23,8 @@ public class RedisConfig {
     public void test01(){
         Jedis jedis = new Jedis("localhost", 6379);
 //        jedis.auth("我现在没有密码");//输密码
-        //jedis.set("hewen","傻逼");
-        String hewen = jedis.get("hewen");
+        //jedis.set("com.hewen","傻逼");
+        String hewen = jedis.get("com.hewen");
         System.out.println(hewen);
     }
     @Test
@@ -34,7 +34,7 @@ public class RedisConfig {
         Set<HostAndPort> nodes = new HashSet<>();
         nodes.add(node1);
         JedisCluster jedisCluster = new JedisCluster(nodes, 100, 100, 100, "密码", jedisPoolConfig);
-        jedisCluster.set("hewen","sssb");
-        System.out.println(jedisCluster.get("hewen"));
+        jedisCluster.set("com.hewen","sssb");
+        System.out.println(jedisCluster.get("com.hewen"));
     }
 }

@@ -1,8 +1,8 @@
-//package com.hewen.com.hewen.dao;
+//package com.com.hewen.com.com.hewen.dao;
 //
-//import com.hewen.pojo.User;
+//import com.com.hewen.pojo.User;
 //
-//import java.com.hewen.util.List;
+//import java.com.com.hewen.util.List;
 //
 ///**
 // * 2021/8/6

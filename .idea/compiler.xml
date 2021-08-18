@@ -15,6 +15,7 @@
         <module name="Mybatis02" />
         <module name="Mybatis03" />
         <module name="Mybatis04" />
+        <module name="Mybatis05" />
         <module name="springcloud-eureka-7001" />
         <module name="springcloud-nacos-8848" />
       </profile>
