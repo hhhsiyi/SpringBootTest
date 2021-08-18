@@ -25,12 +25,13 @@ public class BlackListLoader {
 
     @Resource
     private Job blackListJob;
-//    1、定义了一个名称为name的参数，值为%tb%。意思就是替换sql的模糊查询。
+
+    //    1、定义了一个名称为name的参数，值为%tb%。意思就是替换sql的模糊查询。
     public void loadBlackList() {
         try {
             JobParametersBuilder jobParametersBuilder = new JobParametersBuilder();
-            jobParametersBuilder.addString("name", "%tb%");
-
+            jobParametersBuilder.addString("name", "%tb%").addLong("time", System.currentTimeMillis()).toJobParameters();
+//            .toJobParameters()
             jobLauncher.run(blackListJob, jobParametersBuilder.toJobParameters());
 
         } catch (JobInstanceAlreadyCompleteException ex) {

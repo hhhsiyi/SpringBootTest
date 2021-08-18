@@ -17,5 +17,7 @@ public class Startup {
         System.out.println(datasource.toString());
         BlackListLoader blackListLoaderTask = (BlackListLoader) context.getBean("blackListLoader");
         blackListLoaderTask.loadBlackList();
+        //从定义的bean中拿出来一个实例，然后就进行调用方法执行job
+
     }
 }

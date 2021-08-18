@@ -29,7 +29,7 @@
         <!-- 配置连接数据库的基本信息 -->
         <property name="driverClassName" value="${driverClass}"/>
         <property name="url" value="${url}"/>
-        <property name="username" value="${username}"/>
+        <property name="username" value="${usernamee}"/>
         <property name="password" value="${password}"/>
     </bean>
     <!-- 定义数据库连接-->
@@ -37,7 +37,7 @@
 <!--          destroy-method="close"-->
 <!--          p:driverClass="${app.jdbc.driverClassName}"-->
 <!--          p:jdbcUrl="${app.jdbc.url}"-->
-<!--          p:user="${app.jdbc.username}"-->
+<!--          p:user1="${app.jdbc.username}"-->
 <!--          p:password="${app.jdbc.password}"-->
 <!--          p:acquireIncrement="5"-->
 <!--          p:idleConnectionTestPeriod="60"-->

@@ -6,12 +6,17 @@
     <!--    mybatis默认的事务管理器是jdbc，默认的连接池是pooled-->
     <!--    properties在加载的过程中就会读取，所以一定要放在最上方-->
     <!--    <properties></properties>-->
-    <properties resource="db.properties"/>
+    <properties resource="datasource.properties"/>
     <!--    引入外部配置文件，但是也可以自定义配置属性，但是如果出现同名情况，会优先使用外部配置文件-->
     <!--    引入外部配置文件，如果外部文件没有，才会使用自定义的-->
+    <settings>
+<!--        标准的日志工厂实现-->
+<!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
     <typeAliases>
-<!--        <typeAlias alias="user1" type="com.hewen.pojo.User1"/>-->
-        <package name="com.hewen.pojo"/>
+        <typeAlias alias="user1" type="com.hewen.pojo.User1"/>
+<!--        <package name="com.hewen.pojo"/>-->
 <!--        用了包名，直接就去扫描实体类了，不需要起别名，自己已经起好了-->
     </typeAliases>
     <environments default="development">

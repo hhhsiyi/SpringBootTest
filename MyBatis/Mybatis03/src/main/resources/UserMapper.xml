@@ -16,15 +16,33 @@
 2.对象传递参数，直接在sql中取出对象的属性即可
 3.只有一个基本类型的参数的情况下，可以在sql中直接取到
 -->
-<mapper namespace="com.hewen.dao.UserDao">
+<mapper namespace="com.hewen.mapper.UserDao">
+    <resultMap id="myMap" type="user1">
+<!--        column数据库的列  property实体类的属性-->
+<!--        <id column="id" property="id"/>-->
+<!--        <result column="name" property="name"/>-->
+        <result column="pwd" property="password"/>
+    </resultMap>
     <!--    一个namespace绑定一个对应的Dao/Mapper接口，等同于原来的实现了一个接口-->
     <!--    命名空间十分重要，之前不重要，现在是用来绑定接口的，极其重要，其次如果mapper写在java里，需要配置maven静态资源过滤-->
-    <select id="getUserList" resultType="user1">
+    <select id="getUserList" resultType="com.hewen.pojo.User1">
         select *
         from mybatis.user08
     </select>
-
-    <select id="getUserById" parameterType="int" resultType="com.hewen.pojo.User1">
+<!--    <select id="getUserList1" resultType="com.hewen.pojo.User1">-->
+<!--        select id,name,pwd as hewen-->
+<!--        from mybatis.user08-->
+<!--    </select>-->
+<!--   是否用别名-->
+<!--    <select id="getUserList1" resultType="user1">-->
+<!--        select id,name,pwd as hewen-->
+<!--        from mybatis.user08-->
+<!--    </select>-->
+    <select id="getUserList1" resultMap="myMap">
+        select id,name,pwd
+        from mybatis.user08
+    </select>
+    <select id="getUserById" parameterType="int" resultType="user1">
         select *
         from mybatis.user08 t
         where id = #{id}

@@ -39,8 +39,7 @@
     <bean id="blackListReader"  scope="step" class="org.springframework.batch.item.database.JdbcPagingItemReader">
         <property name="dataSource" ref="dataSourceNew" />
         <property name="queryProvider">
-            <bean
-                    class="org.springframework.batch.item.database.support.SqlPagingQueryProviderFactoryBean">
+            <bean class="org.springframework.batch.item.database.support.SqlPagingQueryProviderFactoryBean">
                 <property name="dataSource" ref="dataSourceNew" />
                 <property name="selectClause" value="select NAME" />
                 <property name="fromClause" value="from T_BLACKLIST" />
@@ -61,6 +60,4 @@
 <!--    1、使用spring-batch已实现的分页类：SqlPagingQueryProviderFactoryBean-->
 <!--    2、selectClause、fromClause、fromClause组合成一条sql。-->
 <!--    3、sortKey很重要，如果任务失败，下次启动时不至于处理的记录混乱-->
-
-
 </beans>
