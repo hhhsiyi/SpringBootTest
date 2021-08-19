@@ -2,8 +2,10 @@ package com.hewen.mapper;
 
 
 import com.hewen.pojo.User1;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -20,8 +22,16 @@ public interface UserMapper {
     //说白了，方法存在多个参数，所有的参数前面必须加@param注解
     @Select("select *from user08 where id = #{id}")
     User1 getUserById(@Param("id") int id);
+    @Select("select *from user08 where id = #{id}")
+    User1 getUserById3(User1 user1);
     @Select("select *from user08 where id = #{id} and name = #{name}")
     User1 getUserById2(@Param("id")int id,@Param("name")String name);
+    @Insert("insert into user08(id,name,pwd) values (#{id},#{name},#{password})")
+    int addUser(User1 user1);
+    @Update("update user08 set name=#{name},pwd=#{password} where id=#{id}")
+    int updateUser(User1 user1);
+    @Update("delete from user08 where id=#{uid}")
+    int deleteUser(@Param("uid") int id);
 //    List<User1> getUserListByLimit(Map<String ,Integer> map);
 //    List<User1> getUserListByRowBounds();
 //    List<User1> getUserList();

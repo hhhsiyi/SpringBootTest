@@ -46,5 +46,55 @@ public class UserMapperTest {
             sqlSession.close();
         }
     }
-
+    @Test
+    public void test3() {
+        SqlSession sqlSession = MyBatisUtils.getSqlSession();
+        try {//获得SqlSession对象
+            UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+            User1 user1= mapper.getUserById3(new User1(1, "cmd", "19980928"));
+            System.out.println(user1);
+            int hello = mapper.addUser(new User1(11, "hello", "199"));
+            System.out.println(mapper.getUserById(11));
+            //sqlSession.commit();
+//            int cmd = mapper.addUser(new User1(11, "cmd", "19980928"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            sqlSession.close();
+        }
+    }
+    @Test
+    public void test4() {
+        SqlSession sqlSession = MyBatisUtils.getSqlSession();
+        try {//获得SqlSession对象
+            UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+            User1 user1= mapper.getUserById3(new User1(1, "cmd", "19980928"));
+            System.out.println(mapper.getUserById(1));
+            int hello = mapper.updateUser(new User1(1, "hello", "199"));
+            System.out.println(mapper.getUserById(1));
+            //sqlSession.commit();
+//            int cmd = mapper.addUser(new User1(11, "cmd", "19980928"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            sqlSession.close();
+        }
+    }
+    @Test
+    public void test5() {
+        SqlSession sqlSession = MyBatisUtils.getSqlSession();
+        try {//获得SqlSession对象
+            UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+            int hello = mapper.addUser(new User1(11, "hello", "199"));
+            System.out.println(mapper.getUserById(11));
+            int t =  mapper.deleteUser(11);
+            System.out.println(mapper.getUserById(11));
+            //sqlSession.commit();
+//            int cmd = mapper.addUser(new User1(11, "cmd", "19980928"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            sqlSession.close();
+        }
+    }
 }
