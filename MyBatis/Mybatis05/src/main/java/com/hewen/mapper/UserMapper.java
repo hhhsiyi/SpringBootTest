@@ -2,6 +2,7 @@ package com.hewen.mapper;
 
 
 import com.hewen.pojo.User1;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -15,6 +16,12 @@ import java.util.List;
 public interface UserMapper {
     @Select("select *from user08")
     List<User1> getUsers();
+    //规范是基本类型就加Param，引用类型就不用加
+    //说白了，方法存在多个参数，所有的参数前面必须加@param注解
+    @Select("select *from user08 where id = #{id}")
+    User1 getUserById(@Param("id") int id);
+    @Select("select *from user08 where id = #{id} and name = #{name}")
+    User1 getUserById2(@Param("id")int id,@Param("name")String name);
 //    List<User1> getUserListByLimit(Map<String ,Integer> map);
 //    List<User1> getUserListByRowBounds();
 //    List<User1> getUserList();

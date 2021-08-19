@@ -19,6 +19,10 @@ target/
 bin/
 dependency-reduced-pom.xml
 
+#日志文件
+logs
+.log
+
 # Eclipse Project Files
 
 .classpath

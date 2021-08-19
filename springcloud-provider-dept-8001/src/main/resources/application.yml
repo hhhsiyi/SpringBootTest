@@ -3,7 +3,7 @@ server:
 
 #Mybatis配置
 mybatis:
-  type-aliases-package: com.com.hewen.springcloud.pojo
+  type-aliases-package: com.hewen.springcloud.pojo
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
 

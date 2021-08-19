@@ -16,7 +16,7 @@
 2.对象传递参数，直接在sql中取出对象的属性即可
 3.只有一个基本类型的参数的情况下，可以在sql中直接取到
 -->
-<mapper namespace="com.com.hewen.mapper.UserMapper">
+<mapper namespace="com.hewen.mapper.UserMapper">
     <resultMap id="myMap" type="user1">
 <!--        column数据库的列  property实体类的属性-->
 <!--        <id column="id" property="id"/>-->
@@ -25,11 +25,11 @@
     </resultMap>
     <!--    一个namespace绑定一个对应的Dao/Mapper接口，等同于原来的实现了一个接口-->
     <!--    命名空间十分重要，之前不重要，现在是用来绑定接口的，极其重要，其次如果mapper写在java里，需要配置maven静态资源过滤-->
-    <select id="getUserList" resultType="com.com.hewen.pojo.User1">
+    <select id="getUserList" resultType="com.hewen.pojo.User1">
         select *
         from mybatis.user08
     </select>
-<!--    <select id="getUserList1" resultType="com.com.hewen.pojo.User1">-->
+<!--    <select id="getUserList1" resultType="com.hewen.pojo.User1">-->
 <!--        select id,name,pwd as com.hewen-->
 <!--        from mybatis.user08-->
 <!--    </select>-->
@@ -47,18 +47,18 @@
         from mybatis.user08 t
         where id = #{id}
     </select>
-    <select id="getUserById2" resultType="com.com.hewen.pojo.User1">
+    <select id="getUserById2" resultType="com.hewen.pojo.User1">
         select *
         from mybatis.user08 t
         where id = #{helloId} and pwd=#{pwd}
     </select>
-    <select id="getUserLike" resultType="com.com.hewen.pojo.User1">
+    <select id="getUserLike" resultType="com.hewen.pojo.User1">
                 select * from mybatis.user08 where name like concat(concat('%',#{value}),'%')
     </select>
 <!--        select * from mybatis.user08 where name like concat(concat('%',#{value}),'%')-->
 <!--        select * from mybatis.user08 where name like #{value} '%'-->
     <!--传入对象中的属性可以直接取出来,前提是属性名要相同-->
-    <insert id="addUser" parameterType="com.com.hewen.pojo.User1">
+    <insert id="addUser" parameterType="com.hewen.pojo.User1">
         insert into mybatis.user08 (id, name, pwd)
         values (#{id}, #{name}, #{pwd})
     </insert>
@@ -69,7 +69,7 @@
         values (#{userId}, #{userName}, #{userPwd})
     </insert>
 
-    <update id="updateUser" parameterType="com.com.hewen.pojo.User1">
+    <update id="updateUser" parameterType="com.hewen.pojo.User1">
         update mybatis.user08
         set name=#{name},
             pwd=#{pwd}

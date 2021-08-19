@@ -31,6 +31,20 @@ public class UserMapperTest {
             sqlSession.close();
         }
     }
-
+    @Test
+    public void test2() {
+        SqlSession sqlSession = MyBatisUtils.getSqlSession();
+        try {//获得SqlSession对象
+            UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+            User1 userById = mapper.getUserById(1);
+            System.out.println(userById);
+            User1 hewen = mapper.getUserById2(1, "hewen");
+            System.out.println(hewen);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            sqlSession.close();
+        }
+    }
 
 }

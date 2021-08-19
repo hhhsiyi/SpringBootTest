@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>MyBatis</artifactId>
-        <groupId>com.com.hewen</groupId>
+        <groupId>com.hewen</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.com.hewen</groupId>
+    <groupId>com.hewen</groupId>
     <artifactId>Mybatis03</artifactId>
     <version>1.0-SNAPSHOT</version>
 

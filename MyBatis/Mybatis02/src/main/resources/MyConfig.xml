@@ -10,8 +10,8 @@
     <!--    引入外部配置文件，但是也可以自定义配置属性，但是如果出现同名情况，会优先使用外部配置文件-->
     <!--    引入外部配置文件，如果外部文件没有，才会使用自定义的-->
     <typeAliases>
-<!--        <typeAlias alias="user1" type="com.com.hewen.pojo.User1"/>-->
-        <package name="com.com.hewen.pojo"/>
+<!--        <typeAlias alias="user1" type="com.hewen.pojo.User1"/>-->
+        <package name="com.hewen.pojo"/>
 <!--        用了包名，直接就去扫描实体类了，不需要起别名，自己已经起好了-->
     </typeAliases>
     <environments default="development">
@@ -44,16 +44,16 @@
         </environment>
     </environments>
     <!--    <mappers>-->
-    <!--        <mapper resource="com/com.hewen/com.com.hewen.dao/UserMapper.xml"/>-->
+    <!--        <mapper resource="com/com.hewen/com.hewen.dao/UserMapper.xml"/>-->
     <!--        &lt;!&ndash;        <mapper resource="org/mybatis/example/BlogMapper.xml"/>&ndash;&gt;-->
     <!--    </mappers>-->
-    <!--    org.apache.ibatis.binding.BindingException: Type interface com.com.hewen.com.com.hewen.dao.UserMapper is not known to the MapperRegistry.
+    <!--    org.apache.ibatis.binding.BindingException: Type interface com.hewen.com.hewen.dao.UserMapper is not known to the MapperRegistry.
     -->
     <!--    每一个mapper.xml都需要在Mybatis核心配置文件中注册-->
     <mappers>
-<!--                <mapper url="com.com.hewen.com.com.hewen.dao.UserMapper"/>-->
+<!--                <mapper url="com.hewen.com.hewen.dao.UserMapper"/>-->
         <mapper resource="UserMapper.xml"/>
-<!--        <mapper class="com.com.hewen.dao.UserDao"/>-->
+<!--        <mapper class="com.hewen.dao.UserDao"/>-->
     </mappers>
 
 </configuration>

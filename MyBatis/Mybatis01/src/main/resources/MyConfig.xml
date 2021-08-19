@@ -25,14 +25,14 @@
         </environment>
     </environments>
 <!--    <mappers>-->
-<!--        <mapper resource="com/com.hewen/com.com.hewen.dao/UserMapper.xml"/>-->
+<!--        <mapper resource="com/com.hewen/com.hewen.dao/UserMapper.xml"/>-->
 <!--        &lt;!&ndash;        <mapper resource="org/mybatis/example/BlogMapper.xml"/>&ndash;&gt;-->
 <!--    </mappers>-->
-<!--    org.apache.ibatis.binding.BindingException: Type interface com.com.hewen.com.com.hewen.dao.UserMapper is not known to the MapperRegistry.
+<!--    org.apache.ibatis.binding.BindingException: Type interface com.hewen.com.hewen.dao.UserMapper is not known to the MapperRegistry.
 -->
 <!--    每一个mapper.xml都需要在Mybatis核心配置文件中注册-->
     <mappers>
-<!--        <mapper url="com.com.hewen.com.com.hewen.dao.UserMapper"/>-->
+<!--        <mapper url="com.hewen.com.hewen.dao.UserMapper"/>-->
                 <mapper resource="UserMapper.xml"/>
     </mappers>
 

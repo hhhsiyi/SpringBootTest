@@ -36,7 +36,7 @@ public class UserMapperTest {
             List<User1> user1List = userMapper.getUserList1();//使用别名就查不出来
 
             //方法2：全限定名再强转
-            //List<User> userList = sqlSession.selectList("com.com.hewen.com.com.hewen.dao.UserDao.getUserList");
+            //List<User> userList = sqlSession.selectList("com.hewen.com.hewen.dao.UserDao.getUserList");
             //getMapper相当于去找dao的实现，
             //因为dao和mapperxml绑定了所以就有了联系
             //本来应该去拿实现的，但是面向接口编程
@@ -76,11 +76,11 @@ public class UserMapperTest {
         //getRowBounds 通过java代码层面实现
         RowBounds rowBounds = new RowBounds(1, 2);
         SqlSession sqlSession = MyBatisUtils.getSqlSession();
-        List<User1> objects = sqlSession.selectList("com.com.hewen.mapper.UserMapper.getUserListByRowBounds");
+        List<User1> objects = sqlSession.selectList("com.hewen.mapper.UserMapper.getUserListByRowBounds");
         for (User1 object : objects) {
             System.out.println(object);
         }
-        List<User1> objects2 = sqlSession.selectList("com.com.hewen.mapper.UserMapper.getUserListByRowBounds",null,rowBounds);
+        List<User1> objects2 = sqlSession.selectList("com.hewen.mapper.UserMapper.getUserListByRowBounds",null,rowBounds);
         for (User1 object : objects2) {
             System.out.println(object);
         }
