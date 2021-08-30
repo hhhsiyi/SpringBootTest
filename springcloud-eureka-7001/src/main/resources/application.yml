@@ -16,3 +16,8 @@ eureka:
     #默认就把上面的替换掉了，约定大于配置
   server:
     enable-self-preservation: true
+spring:
+  profiles:
+    include: log4j
+logging:
+  level: warn

@@ -20,7 +20,6 @@ import java.util.List;
 //这里测试属性名和数据库字段名不一致的情况
 public class UserMapperTest {
     static Logger logger = Logger.getLogger(UserMapperTest.class);//因为可能在多个场景使用，因此提升作用域
-
     @Test
     public void test() {
         SqlSession sqlSession = MyBatisUtils.getSqlSession();

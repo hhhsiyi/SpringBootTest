@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hewen.mapper.StudentMapper">
+<!--    <resultMap id="myMap" type="com.hewen.pojo.Student">-->
+<!--        <result column="id" property="id"/>-->
+<!--        <result column="sn" property="name"/>-->
+<!--&lt;!&ndash;        <result column="tn" property="tName"/>&ndash;&gt;-->
+<!--    </resultMap>-->
+<!--    <select id="getStudent" resultType="com.hewen.pojo.Student">-->
+<!--        select *-->
+<!--        from student s,-->
+<!--             teacher t-->
+<!--        where s.tid = t.id-->
+<!--    </select>-->
+    <select id="getStudent" resultType="com.hewen.pojo.Student">
+        select *
+        from student s
+    </select>
+</mapper>

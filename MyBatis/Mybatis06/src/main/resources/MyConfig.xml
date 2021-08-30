@@ -14,11 +14,11 @@
 <!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
         <setting name="logImpl" value="LOG4J"/>
     </settings>
-<!--    <typeAliases>-->
-<!--        <typeAlias alias="user1" type="com.hewen.pojo.User1"/>-->
-<!--&lt;!&ndash;        <package name="com.hewen.pojo"/>&ndash;&gt;-->
-<!--&lt;!&ndash;        用了包名，直接就去扫描实体类了，不需要起别名，自己已经起好了&ndash;&gt;-->
-<!--    </typeAliases>-->
+    <typeAliases>
+        <typeAlias alias="student" type="com.hewen.pojo.Student"/>
+<!--        <package name="com.hewen.pojo"/>-->
+<!--        用了包名，直接就去扫描实体类了，不需要起别名，自己已经起好了-->
+    </typeAliases>
     <environments default="development">
         <!--        尽管可以配置多个环境，但每个 SqlSessionFactory 实例只能选择一种环境。-->
         <environment id="development">
@@ -55,12 +55,15 @@
     <!--    org.apache.ibatis.binding.BindingException: Type interface com.hewen.com.hewen.dao.UserMapper is not known to the MapperRegistry.
     -->
     <!--    每一个mapper.xml都需要在Mybatis核心配置文件中注册-->
-<!--    <mappers>-->
-<!--&lt;!&ndash;                <mapper url="com.hewen.com.hewen.dao.UserMapper"/>&ndash;&gt;-->
-<!--&lt;!&ndash;        <mapper resource="UserMapper.xml"/>&ndash;&gt;-->
-<!--&lt;!&ndash;        如果换成SQL写在接口那里，就要变成绑定接口&ndash;&gt;-->
+    <mappers>
+<!--                <mapper url="com.hewen.com.hewen.dao.UserMapper"/>-->
+<!--        <mapper resource="com.hewen.mapper.*Mapper.xml"/>-->
+<!--        <mapper resource="com/hewen/mapper/*Mapepr.xml"/>-->
+        <mapper class="com.hewen.mapper.TeacherMapper"/>
+        <mapper class="com.hewen.mapper.StudentMapper"/>
+<!--        如果换成SQL写在接口那里，就要变成绑定接口-->
 <!--        <mapper class="com.hewen.mapper.UserMapper"/>-->
-<!--&lt;!&ndash;        <mapper class="com.hewen.dao.UserDao"/>&ndash;&gt;-->
-<!--    </mappers>-->
+<!--        <mapper class="com.hewen.dao.UserDao"/>-->
+    </mappers>
 
 </configuration>
