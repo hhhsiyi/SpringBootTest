@@ -15,8 +15,8 @@
         <setting name="logImpl" value="LOG4J"/>
     </settings>
     <typeAliases>
-        <typeAlias alias="student" type="com.hewen.pojo.Student"/>
         <typeAlias type="com.hewen.pojo.Teacher" alias="teacher"/>
+        <typeAlias type="com.hewen.pojo.Student" alias="student"/>
 <!--        <package name="com.hewen.pojo"/>-->
 <!--        用了包名，直接就去扫描实体类了，不需要起别名，自己已经起好了-->
     </typeAliases>

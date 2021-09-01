@@ -8,6 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-provider-dept-8001" />
+        <module name="springcloud-eureka-7001" />
+        <module name="springcloud-nacos-8848" />
         <module name="springcloud-consumer-dept-8002" />
         <module name="SpringBatch" />
         <module name="springcloud-api" />
@@ -17,8 +19,7 @@
         <module name="Mybatis04" />
         <module name="Mybatis05" />
         <module name="Mybatis06" />
-        <module name="springcloud-eureka-7001" />
-        <module name="springcloud-nacos-8848" />
+        <module name="Mybatis07" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">

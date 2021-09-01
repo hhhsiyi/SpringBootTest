@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hewen.mapper.StudentMapper">
+<!--    select s.id sid, s.name sname, t.name tname, t.id id-->
+<!--    from teacher t,-->
+<!--    student s-->
+<!--    where t.id = s.id-->
+<!--    按结果嵌套查询-->
+    <select id="getStudent" resultType="Student">
+        select t.tid from student t;
+    </select>
+    <select id="getStudent1" resultType="string">
+        select distinct t.tid from student t;
+    </select>
+</mapper>
