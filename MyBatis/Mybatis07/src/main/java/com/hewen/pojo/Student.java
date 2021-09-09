@@ -6,6 +6,9 @@ package com.hewen.pojo;
  * 云想衣裳花想容，春风拂槛露华浓
  * 最是人间留不住，朱颜辞镜花辞树
  */
+//@Data
+//@AllArgsConstructor
+//@NoArgsConstructor
 public class Student {
     private int id;
     private String name;
@@ -13,7 +16,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "\nStudent{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", tid=" + tid +
@@ -37,6 +40,9 @@ public class Student {
     public Student(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Student() {
     }
 
     public int getId() {

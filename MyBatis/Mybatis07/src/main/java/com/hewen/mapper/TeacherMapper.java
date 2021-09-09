@@ -14,4 +14,5 @@ import java.util.List;
 public interface TeacherMapper {
     public Teacher getTeacher();
     public List<Teacher> getTeacher(@Param("tid")int id);
+    public List<Teacher> getTeacher2(@Param("tid")int id);
 }

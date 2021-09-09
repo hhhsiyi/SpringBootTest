@@ -9,19 +9,39 @@
 <!--    where t.id = s.id-->
 <!--    按结果嵌套查询-->
     <select id="getTeacher" resultMap="TS">
-        select s.id sid, s.name sname, t.name tname, t.id id
+        select s.id sid, s.name sname, t.name tname, t.id tid
         from student s,teacher t
-        where t.id = s.id and t.id=#{tid}
+        where t.id = s.tid and t.id=#{tid}
     </select>
     <resultMap id="TS" type="Teacher">
         <result column="tid" property="id"/>
         <result column="tname" property="name"/>
 <!--        javaType指定属性
-而集合中的泛型信息，我们使用ofType获取，其实还可以使用Gson来获取的-->
+而集合中的泛型信息，我们使用ofType获取，其实还可以使用Gson来获取的
+javaType指定属性的类型-->
         <collection property="students" ofType="Student">
             <result property="id" column="sid"/>
             <result property="name" column="sname"/>
             <result property="tid" column="tid"/>
         </collection>
     </resultMap>
+<!--    第二种方式，按照查询嵌套处理-->
+    <select id="getTeacher2" resultMap="TS2">
+        select *
+        from teacher t
+        where t.id=#{tid}
+    </select>
+    <resultMap id="TS2" type="Teacher">
+        <!--        <result column="tid" property="id"/>-->
+        <!--        <result column="tname" property="name"/>-->
+        <!--        长的一样可以省略-->
+        <!--        javaType返回类型 ofType返回类型是集合，集合里面的泛型对象是学生-->
+        <collection property="students" javaType="ArrayList" ofType="Student" select="getStudentsByTid" column="id"/>
+<!--这里的id什么样子都可以的，不一定非要等于下面的tid-->
+    </resultMap>
+    <select id="getStudentsByTid" resultType="Student">
+        select *
+        from student t
+        where t.tid=#{tid}
+    </select>
 </mapper>

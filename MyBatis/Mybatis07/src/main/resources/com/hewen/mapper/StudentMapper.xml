@@ -9,7 +9,7 @@
 <!--    where t.id = s.id-->
 <!--    按结果嵌套查询-->
     <select id="getStudent" resultType="Student">
-        select t.tid from student t;
+        select * from student t;
     </select>
     <select id="getStudent1" resultType="string">
         select distinct t.tid from student t;
