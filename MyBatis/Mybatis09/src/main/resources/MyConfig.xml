@@ -12,14 +12,15 @@
     <settings>
 <!--        标准的日志工厂实现-->
 <!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
-        <setting name="logImpl" value="LOG4J"/>
+<!--        <setting name="logImpl" value="LOG4J"/>-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
-    <typeAliases>
-        <typeAlias type="com.hewen.mybatis08.pojo.Blog" alias="blog"/>
-<!--        <package name="com.hewen.pojo"/>-->
-<!--        用了包名，直接就去扫描实体类了，不需要起别名，自己已经起好了-->
-    </typeAliases>
+<!--    <typeAliases>-->
+<!--        <typeAlias type="com.hewen.mybatis09.pojo.User" alias="user"/>-->
+<!--&lt;!&ndash;        <package name="com.hewen.pojo"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        用了包名，直接就去扫描实体类了，不需要起别名，自己已经起好了&ndash;&gt;-->
+<!--    </typeAliases>-->
     <environments default="development">
         <!--        尽管可以配置多个环境，但每个 SqlSessionFactory 实例只能选择一种环境。-->
         <environment id="development">
@@ -60,7 +61,7 @@
 <!--                <mapper url="com.hewen.com.hewen.dao.UserMapper"/>-->
 <!--        <mapper resource="com.hewen.mapper.*Mapper.xml"/>-->
 <!--        <mapper resource="com/hewen/mapper/*Mapepr.xml"/>-->
-        <mapper class="com.hewen.mybatis08.mapper.BlogMapper"/>
+        <mapper class="com.hewen.mybatis09.mapper.UserMapper"/>
 <!--        如果换成SQL写在接口那里，就要变成绑定接口-->
 <!--        <mapper class="com.hewen.mapper.UserMapper"/>-->
 <!--        <mapper class="com.hewen.dao.UserDao"/>-->

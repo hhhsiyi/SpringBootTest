@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hewen.mybatis09.mapper.UserMapper">
+
+    <select id="queryUserById" resultType="com.hewen.mybatis09.pojo.User">
+        select * from user08 where id = #{id}
+    </select>
+</mapper>
