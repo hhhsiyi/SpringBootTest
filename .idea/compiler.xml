@@ -8,11 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-provider-dept-8001" />
+        <module name="DesignPatterns" />
         <module name="springcloud-eureka-7001" />
         <module name="springcloud-nacos-8848" />
         <module name="springcloud-consumer-dept-8002" />
         <module name="SpringBatch" />
         <module name="springcloud-api" />
+        <module name="Algorithms" />
         <module name="Mybatis01" />
         <module name="Mybatis02" />
         <module name="Mybatis03" />

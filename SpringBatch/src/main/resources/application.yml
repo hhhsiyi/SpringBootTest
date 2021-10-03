@@ -17,7 +17,7 @@ spring:
     initialize-schema: always
     name1: 1231
     job:
-      names: listenerJob,parameterJob
+      names: listenerJob,parameterJob,deciderDemoJob
       # parentJob,flowDemoJob,listenerJob #配置要启动的job名称，   逗号分隔
   profiles:
     include: com.hewen
