@@ -6,7 +6,7 @@ package com.hewen.pojo;
  * 云想衣裳花想容，春风拂槛露华浓
  * 最是人间留不住，朱颜辞镜花辞树
  */
-public class User {
+public class User2 {
     private int id;
     private String name;
     private String pwd;
@@ -35,13 +35,13 @@ public class User {
         this.pwd = pwd;
     }
 
-    public User(int id, String name, String pwd) {
+    public User2(int id, String name, String pwd) {
         this.id = id;
         this.name = name;
         this.pwd = pwd;
     }
 
-    public User() {
+    public User2() {
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.hewen.dao;
 
-import com.hewen.pojo.User;
+import com.hewen.pojo.User2;
 import com.hewen.util.MyBatisUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
@@ -28,17 +28,17 @@ public class UserDaoTest {
             //执行SQL
             //方法1：getMapper
             UserDao userDao = sqlSession.getMapper(UserDao.class);
-            List<User> userList = userDao.getUserList();
+            List<User2> user2List = userDao.getUserList();
             //方法2：全限定名再强转
             //List<User> userList = sqlSession.selectList("com.hewen.com.hewen.dao.UserDao.getUserList");
             //getMapper相当于去找dao的实现，
             //因为dao和mapperxml绑定了所以就有了联系
             //本来应该去拿实现的，但是面向接口编程
             //底层是动态代理，只要点class必反射
-            for (User user : userList) {
-                System.out.println(user);
+            for (User2 user2 : user2List) {
+                System.out.println(user2);
             }
-            System.out.println(userList);
+            System.out.println(user2List);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -50,8 +50,8 @@ public class UserDaoTest {
     public void test2() {
         SqlSession sqlSession = MyBatisUtils.getSqlSession();
         UserDao userDao = sqlSession.getMapper(UserDao.class);
-        User userList = userDao.getUserById(1);
-        System.out.println(userList);
+        User2 user2List = userDao.getUserById(1);
+        System.out.println(user2List);
         sqlSession.close();
     }
 
@@ -59,7 +59,7 @@ public class UserDaoTest {
     public void test3() {
         SqlSession sqlSession = MyBatisUtils.getSqlSession();
         UserDao userDao = sqlSession.getMapper(UserDao.class);
-        int userList = userDao.addUser(new User(5, "格纹", "19980928"));
+        int userList = userDao.addUser(new User2(5, "格纹", "19980928"));
         if (userList > 0) {
             System.out.println(userList);
             sqlSession.commit();
@@ -72,7 +72,7 @@ public class UserDaoTest {
     public void test4() {
         SqlSession sqlSession = MyBatisUtils.getSqlSession();
         UserDao userDao = sqlSession.getMapper(UserDao.class);
-        int userList = userDao.updateUser(new User(1, "真何文", "19980928"));
+        int userList = userDao.updateUser(new User2(1, "真何文", "19980928"));
         if (userList > 0) {
             System.out.println(userList);
             sqlSession.commit();
@@ -115,9 +115,9 @@ public class UserDaoTest {
         Map<String, Object> userMap = new HashMap<>();
         userMap.put("helloId",1);
         userMap.put("pwd",1);//如果不在xml里判空，那是查不出来值的
-        User userList = userDao.getUserById2(userMap);
-        if (userList !=null) {
-            System.out.println(userList);
+        User2 user2List = userDao.getUserById2(userMap);
+        if (user2List !=null) {
+            System.out.println(user2List);
             sqlSession.commit();
         }
         sqlSession.close();
@@ -128,9 +128,9 @@ public class UserDaoTest {
     public void test8() {
         SqlSession sqlSession = MyBatisUtils.getSqlSession();
         UserDao userDao = sqlSession.getMapper(UserDao.class);
-        List<User> userList = userDao.getUserLike("h");//这种情况有点low啊
-        if (userList !=null) {
-            System.out.println(userList);
+        List<User2> user2List = userDao.getUserLike("h");//这种情况有点low啊
+        if (user2List !=null) {
+            System.out.println(user2List);
             sqlSession.commit();
         }
         sqlSession.close();

@@ -24,7 +24,7 @@ public class MyBatisUtils {
     static {
         try {
             //1.获取SqlSessionFactory对象
-            String resource = "MyConfig.xml";
+            String resource = "MyConfig2.xml";
             InputStream inputStream = Resources.getResourceAsStream(resource);
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 
