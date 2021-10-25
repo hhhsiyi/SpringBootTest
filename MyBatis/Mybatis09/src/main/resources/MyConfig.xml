@@ -19,7 +19,7 @@
         <setting name="cacheEnabled" value="true"/>
     </settings>
 <!--    <typeAliases>-->
-<!--        <typeAlias type="com.hewen.mybatis09.pojo.User" alias="user"/>-->
+<!--        <typeAlias type="com.hewen.mybatis09.pojo.User" alias="user2"/>-->
 <!--&lt;!&ndash;        <package name="com.hewen.pojo"/>&ndash;&gt;-->
 <!--&lt;!&ndash;        用了包名，直接就去扫描实体类了，不需要起别名，自己已经起好了&ndash;&gt;-->
 <!--    </typeAliases>-->

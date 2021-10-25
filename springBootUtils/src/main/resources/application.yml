@@ -1,0 +1,9 @@
+server:
+  port: 8002
+#spring:
+#  datasource:
+#    username: root
+#    password: 19980928
+#    url: jdbc:mysql://localhost:3306/eesy_mybatis?userSSL=false&serverTimezone=UTC
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+##    type: com.alibaba.druid.pool.DruidDataSource

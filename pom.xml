@@ -17,6 +17,7 @@
         <module>MyBatis</module>
         <module>DesignPatterns</module>
         <module>Algorithms</module>
+        <module>springBootUtils</module>
     </modules>
 
 

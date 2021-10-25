@@ -6,8 +6,8 @@
     <diskStore path="./tmpdir/Tmp_EhCache"/>
 <!--
 diskStore:缓存路径，分为内存和磁盘两级，此属性定义磁盘的缓存位置，参数定义如下：
-user.home用户主目录
-user.dir用户当前工作目录
+user2.home用户主目录
+user2.dir用户当前工作目录
 java.io.tmpdir为java默认临时文件路径
 -->
 <!--
