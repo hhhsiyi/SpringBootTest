@@ -36,4 +36,9 @@ public class JsonAndVo {
         System.out.println(1);
         return map1;
     }
+    @RequestMapping("/json2")
+    public void getTestJson2(@RequestBody BigVO data){
+        AVO avo = data.getAvo();
+        BVO bvo = data.getBvo();
+    }
 }
