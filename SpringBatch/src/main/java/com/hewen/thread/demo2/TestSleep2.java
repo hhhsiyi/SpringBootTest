@@ -50,4 +50,19 @@ public class TestSleep2 implements Runnable {
             }
         }
     }
+    @Test
+    public void tesss01(){
+char c = 74;
+
+    long h = 999;
+    String s = null;
+    if ((s!=null)&&(s.length()>0)){
+        System.out.println(1);
+    }
+    int _name;
+    int first;
+        if ((s==null)||(s.length()==0)){
+            System.out.println(1);
+        }
+    }
 }

@@ -13,6 +13,7 @@ public class DeptProvider_8001 {
     public static void main(String[] args) {
         SpringApplication.run(DeptProvider_8001.class,args);
     }
+    //用了这个注解之后，可以通过服务名去调用
     @LoadBalanced
     @Bean
     public RestTemplate restTemplate(){
