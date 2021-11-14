@@ -23,8 +23,10 @@ public class DeptConsumerController {
     private RestTemplate restTemplate;
     //到底什么是RestTemplate呢，说到底，就是提供多种便捷访问远程http服务的方法，简单的restFul服务模板
 
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    //    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    private static final String REST_URL_PREFIX = "http://SPRINGCLOUD-PROVIDER-DEPT";
 
+    //如果用ribbon负载均衡实现的时候，这里的url应该是一个变量，应该是服务名，根据一个服务去找，而不是向之前一样只从某一个固定IP去拿
     @RequestMapping("consumer/dept/add")
     public boolean addDept(Dept dept) {
         return restTemplate.postForObject(REST_URL_PREFIX + "/dept/add", dept, Boolean.class);

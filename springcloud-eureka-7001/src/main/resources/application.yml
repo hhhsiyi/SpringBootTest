@@ -19,5 +19,3 @@ eureka:
 spring:
   profiles:
     include: log4j
-logging:
-  level: warn

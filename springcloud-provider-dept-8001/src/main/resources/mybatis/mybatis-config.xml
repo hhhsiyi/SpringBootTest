@@ -7,4 +7,7 @@
 <!--        开启二级缓存-->
         <setting name="cacheEnabled" value="true"/>
     </settings>
+<!--    <mappers>-->
+<!--        <mapper resource="DeptMapper.xml"/>-->
+<!--    </mappers>-->
 </configuration>

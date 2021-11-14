@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-provider-dept-8001" />
+        <module name="springBootUtils" />
         <module name="DesignPatterns" />
         <module name="springcloud-eureka-7001" />
         <module name="springcloud-nacos-8848" />
