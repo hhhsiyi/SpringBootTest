@@ -9,7 +9,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-provider-dept-8001" />
         <module name="springBootUtils" />
+        <module name="springcloud-eureka-7003" />
         <module name="DesignPatterns" />
+        <module name="springcloud-eureka-7002" />
         <module name="springcloud-eureka-7001" />
         <module name="springcloud-nacos-8848" />
         <module name="springcloud-consumer-dept-8002" />
@@ -28,6 +30,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
+      <module name="springcloud-eureka-7002" target="1.8" />
+      <module name="springcloud-eureka-7003" target="1.8" />
       <module name="springcloud-provider" target="1.5" />
     </bytecodeTargetLevel>
   </component>

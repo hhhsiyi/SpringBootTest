@@ -3,7 +3,8 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7001/eureka/
+#      defaultZone: http://localhost:7001/eureka/
+      defaultZone: http://eureka7003.com:7003/eureka/,http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
   instance:
     instance-id: 何文 #${spring.application.name} #修改默认的描述，改别的配置文件看起来拿不到，但是其实拿得到
     prefer-ip-address: true #是否将ip也注册到eurekaServer上
