@@ -39,7 +39,7 @@ info:
 # 健康检查
 management:
   server:
-    port: 12138
+    port: 12140
   endpoints:
     web:
       exposure:
