@@ -6,7 +6,7 @@ eureka:
 #      defaultZone: http://localhost:7001/eureka/
       defaultZone: http://eureka7003.com:7003/eureka/,http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
   instance:
-    instance-id: 何文提供端2 #${spring.application.name} #修改默认的描述，改别的配置文件看起来拿不到，但是其实拿得到
+    instance-id: 何文提供端3 #${spring.application.name} #修改默认的描述，改别的配置文件看起来拿不到，但是其实拿得到
     prefer-ip-address: true #是否将ip也注册到eurekaServer上
     lease-renewal-interval-in-seconds: 10 #客户端发送心跳的频率
     lease-expiration-duration-in-seconds: 15 #告诉服务端我多少秒之内没发心跳就移除我的服务
