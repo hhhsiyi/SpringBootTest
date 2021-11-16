@@ -1,5 +1,5 @@
 server:
-  port: 8002
+  port: 80
 #Eureka配置
 #服务注册到哪里
 eureka:
