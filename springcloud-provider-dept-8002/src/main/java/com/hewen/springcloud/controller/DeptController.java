@@ -20,26 +20,26 @@ public class DeptController {
 //    public boolean addDept(Dept dept) {
 //        return deptService.addDept(dept);
 //    }
-    @PostMapping("/dept/add")//用get去提交东西不安全
+    @RequestMapping("/dept/add")//用get去提交东西不安全
     public boolean addDept(@RequestBody Dept dept) {
         return deptService.addDept(dept);
     }
 
     //TODO如果出现用restFul方式传递参数却丢失值的情情况，请添加@RequestBody注解
-    @GetMapping("/dept/add")//用get去提交东西不安全
-    public boolean addDept1(Dept dept) {
-
-        return deptService.addDept(dept);
-    }
+//    @RequestMapping("/dept/add")//用get去提交东西不安全
+//    public boolean addDept1(Dept dept) {
+//
+//        return deptService.addDept(dept);
+//    }
 
     //http://localhost:8001/dept/get/1
-    @GetMapping("/dept/get/{id}")
+    @RequestMapping("/dept/get/{id}")
     public Dept queryById(@PathVariable("id") Long id) {
         return deptService.queryById(id);
     }
 
     //http://localhost:8001/dept/queryAll
-    @GetMapping("/dept/queryAll")
+    @RequestMapping("/dept/queryAll")
     public List<Dept> queryAll() {
         return deptService.queryAll();
     }
@@ -60,7 +60,7 @@ public class DeptController {
             System.out.println(instance.getHost()+" "
                     +instance.getPort()+" "
                     +instance.getUri()+" "
-            +instance.getServiceId());
+                    +instance.getServiceId());
         }
         return this.discoveryClient;
     }
