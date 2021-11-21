@@ -7,7 +7,7 @@ import java.util.List;
 public interface DeptService {
     public boolean addDept(Dept dept);
 
-    public Dept queryById(Long id);
+    public Dept queryById1(Long id);
 
     public List<Dept> queryAll();
 }
