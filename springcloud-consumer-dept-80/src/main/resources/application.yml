@@ -15,6 +15,11 @@ eureka:
 spring:
   application:
     name: 何文大沙雕啊
-
+# 开启hystrix
+feign:
+#  hystrix:
+#    enabled: true # 启动hystrix熔断机制
+  circuitbreaker:
+    enabled: true
 info:
   app.name: 何文大沙雕啊22

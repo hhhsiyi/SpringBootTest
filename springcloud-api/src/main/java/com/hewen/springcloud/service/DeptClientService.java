@@ -15,7 +15,7 @@ import java.util.List;
  * 云想衣裳花想容，春风拂槛露华浓
  * 最是人间留不住，朱颜辞镜花辞树
  */
-@FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT")
+@FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT",fallbackFactory = DeptClientFallbackFactory.class)
 // 这个里面配的就是微服务的名字
 @Component
 public interface DeptClientService {
