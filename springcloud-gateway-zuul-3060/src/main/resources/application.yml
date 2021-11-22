@@ -1,0 +1,24 @@
+server:
+  port: 3060
+spring:
+  application:
+    name: Hewen's SpringCloud-GateWay-Zuul-3060
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: 何文菜鸡网关
+    prefer-ip-address: true # 隐藏ip
+info:
+  app.name: HewenLsy
+  company.name: CIB
+  version: 1.0.0
+zuul:
+  routes:
+    mydept.serviceId: SPRINGCLOUD-PROVIDER-DEPT
+    mydept.path: /mydept/**
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000
