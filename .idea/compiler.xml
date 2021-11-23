@@ -7,9 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springBootUtils" />
+        <module name="springcloud-gateway-zuul-3060" />
+        <module name="SpringBatch" />
+        <module name="springcloud-consumer-hystrix-dashboard" />
         <module name="springcloud-provider-dept-8001" />
         <module name="springcloud-provider-dept-8002" />
-        <module name="springBootUtils" />
         <module name="springcloud-consumer-dept-80" />
         <module name="springcloud-provider-dept-8003" />
         <module name="springcloud-provider-dept-8001-Hystrix" />
@@ -18,7 +21,6 @@
         <module name="springcloud-eureka-7002" />
         <module name="springcloud-eureka-7001" />
         <module name="springcloud-nacos-8848" />
-        <module name="SpringBatch" />
         <module name="springcloud-api" />
         <module name="Algorithms" />
         <module name="Mybatis01" />
