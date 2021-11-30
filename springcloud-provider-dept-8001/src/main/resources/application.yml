@@ -20,7 +20,10 @@ spring:
     password: 19980928
   profiles:
     include: eureka
-
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 ##Eureka配置
 ##服务注册到哪里
 #eureka:
@@ -44,3 +47,5 @@ management:
     web:
       exposure:
         include: "*"
+myValue:
+  hewenTestValue: 2021

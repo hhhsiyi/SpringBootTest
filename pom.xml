@@ -39,7 +39,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencyManagement>
-<!--        management是管理，用的时候需要导入的，在子类里导入的默认就是我们这边定义的-->
+        <!--        management是管理，用的时候需要导入的，在子类里导入的默认就是我们这边定义的-->
         <dependencies>
             <dependency>
                 <!--                SpringCloud的依赖-->
@@ -49,7 +49,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-<!--            Springboot依赖-->
+            <!--            Springboot依赖-->
             <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -59,7 +59,7 @@
                 <scope>import</scope>
             </dependency>
 
-<!--            数据库连接-->
+            <!--            数据库连接-->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -70,29 +70,29 @@
                 <artifactId>druid</artifactId>
                 <version>1.2.4</version>
             </dependency>
-<!--            Springboot启动器-->
+            <!--            Springboot启动器-->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>2.1.3</version>
             </dependency>
-<!--            logback-->
+            <!--            logback-->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
                 <version>${logback.version}</version>
             </dependency>
-<!--            log4j-->
+            <!--            log4j-->
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
             </dependency>
-<!--            junit-->
+            <!--            junit-->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-<!--                <version>4.13</version>-->
+                <!--                <version>4.13</version>-->
                 <version>${junit.version}</version>
             </dependency>
             <dependency>
@@ -101,12 +101,12 @@
                 <version>${lombok.version}</version>
             </dependency>
 
-<!--            <dependency>-->
-<!--                <groupId>cn.hutool</groupId>-->
-<!--                <artifactId>hutool-all</artifactId>-->
-<!--                <version>5.5.2</version>-->
-<!--                <scope>import</scope>-->
-<!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>cn.hutool</groupId>-->
+            <!--                <artifactId>hutool-all</artifactId>-->
+            <!--                <version>5.5.2</version>-->
+            <!--                <scope>import</scope>-->
+            <!--            </dependency>-->
             <dependency>
                 <artifactId>maven-test</artifactId>
                 <groupId>com.hewen</groupId>
@@ -114,12 +114,22 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>2.2.6.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>2.2.6.RELEASE</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-<dependencies>
-                <dependency>
-                    <groupId>cn.hutool</groupId>
-                    <artifactId>hutool-all</artifactId>
-                </dependency>
-</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+    </dependencies>
 </project>

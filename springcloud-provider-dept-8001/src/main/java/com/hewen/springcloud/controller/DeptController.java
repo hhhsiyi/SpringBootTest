@@ -3,6 +3,7 @@ package com.hewen.springcloud.controller;
 import com.hewen.springcloud.pojo.Dept;
 import com.hewen.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
@@ -57,26 +58,33 @@ public class DeptController {
         List<ServiceInstance> instances = discoveryClient.getInstances("SPRINGCLOUD-PROVIDER-DEPT");
         for (ServiceInstance instance : instances
         ) {
-            System.out.println(instance.getHost()+" "
-                    +instance.getPort()+" "
-                    +instance.getUri()+" "
-                    +instance.getServiceId());
+            System.out.println(instance.getHost() + " "
+                    + instance.getPort() + " "
+                    + instance.getUri() + " "
+                    + instance.getServiceId());
         }
         return this.discoveryClient;
     }
+
+    @Value("${myValue.hewenTestValue}")
+    private String hewenTestValue;
+
     @RequestMapping("/testRest")
-    public String t(){
-        System.out.println("1");
-        return "2";
+    public String t() {
+        String s = "本次更新过了的字段名字为: " + hewenTestValue;
+        System.out.println(s);
+        return s;
     }
+
     @Autowired
     private RestTemplate restTemplate;
+
     @RequestMapping("/testRest2")
-    public void tt(){
-        String url ="http://localhost:8001/testRest";
-        String url2="http://SPRINGCLOUD-PROVIDER-DEPT/testRest";
-        String forObject = (String)restTemplate.getForObject(url2,String.class);
-        System.out.println("\n"+forObject);
+    public void tt() {
+        String url = "http://localhost:8001/testRest";
+        String url2 = "http://SPRINGCLOUD-PROVIDER-DEPT/testRest";
+        String forObject = (String) restTemplate.getForObject(url2, String.class);
+        System.out.println("\n" + forObject);
     }
 
 }
