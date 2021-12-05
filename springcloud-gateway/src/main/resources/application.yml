@@ -1,0 +1,19 @@
+server:
+  port: 1998
+spring:
+  application:
+    name: SpringCloud-GateWay-Hewen
+  cloud: #配置Springcloud相关
+    gateway: #配置gateway相关
+      discovery: #配置网关发现机制
+        locator: #配置处理机制
+          # 开启网关自动映射处理逻辑，只要请求地址符合规则，http://gatewayIP:gatewayPort/微服务名称/微服务请求地址，
+          # 则网关自动映射，把请求转发到http://微服务名称/微服务请求地址
+          # 如服务名a-b-c，请求地址是http://localhost:1998/a-b-c/getURL
+          # 自动转发到http://a-b-c/getURL
+          enabled: true
+          lower-case-service-id: true #开启服务名称小写，因为Eureka对服务名管理是默认全部大写的
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/

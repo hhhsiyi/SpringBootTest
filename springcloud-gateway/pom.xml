@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springcloud-eureka-7003</artifactId>
+    <artifactId>springcloud-gateway</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -17,23 +17,13 @@
     </properties>
 
     <dependencies>
-        <!--        SpringBoot2.x之后建议用Netflix的eureka-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-<!--            <version>3.0.2</version>-->
-            <!--                        <groupId>org.springframework.cloud</groupId>-->
-            <!--                        <artifactId>spring-cloud-starter-eureka-server</artifactId>-->
-            <!--                        <version>1.4.7.RELEASE</version>-->
-        </dependency>
-        <!--        热部署-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
     </dependencies>
 </project>

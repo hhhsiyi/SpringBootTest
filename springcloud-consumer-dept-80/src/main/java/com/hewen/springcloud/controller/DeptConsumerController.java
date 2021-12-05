@@ -44,8 +44,8 @@ public class DeptConsumerController {
     @RequestMapping("consumer/dept/get/{id}")//用get去提交东西不安全
     // TODO要去模拟http://localhost:8001/dept/get/1这样的请求
     public Dept queryById(@PathVariable("id") Long id) {
-        return service.queryById(id);
-//        return restTemplate.getForObject(REST_URL_PREFIX + "/dept/get/" + id, Dept.class);
+//        return service.queryById(id);
+        return restTemplate.getForObject(REST_URL_PREFIX + "/dept/get/" + id, Dept.class);
     }
 
     @RequestMapping("consumer/dept/queryAll")//用get去提交东西不安全

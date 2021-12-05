@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springcloud-eureka-7003</artifactId>
+    <artifactId>springcloud-nacos-example</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -17,23 +17,26 @@
     </properties>
 
     <dependencies>
-        <!--        SpringBoot2.x之后建议用Netflix的eureka-->
+<!--                <dependency>-->
+<!--                    <groupId>com.alibaba.cloud</groupId>-->
+<!--                    <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+<!--                    <version>2021.1</version>-->
+<!--                </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+<!--            <version>0.9.0.RELEASE</version>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-<!--            <version>3.0.2</version>-->
-            <!--                        <groupId>org.springframework.cloud</groupId>-->
-            <!--                        <artifactId>spring-cloud-starter-eureka-server</artifactId>-->
-            <!--                        <version>1.4.7.RELEASE</version>-->
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <version>0.2.1.RELEASE</version>
         </dependency>
-        <!--        热部署-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.0.4.RELEASE</version>
         </dependency>
     </dependencies>
 </project>

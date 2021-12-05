@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springBootUtils" />
+        <module name="springcloud-gateway" />
         <module name="springcloud-gateway-zuul-3060" />
         <module name="SpringBatch" />
         <module name="springcloud-consumer-hystrix-dashboard" />
@@ -31,10 +32,12 @@
         <module name="Mybatis06" />
         <module name="Mybatis07" />
         <module name="Mybatis08" />
+        <module name="springcloud-nacos-example" />
         <module name="Mybatis09" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
+      <module name="springcloud-consumer-dept-8002" target="1.8" />
       <module name="springcloud-provider" target="1.5" />
     </bytecodeTargetLevel>
   </component>
