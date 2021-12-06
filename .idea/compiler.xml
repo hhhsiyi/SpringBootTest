@@ -23,6 +23,7 @@
         <module name="springcloud-eureka-7001" />
         <module name="springcloud-nacos-8848" />
         <module name="springcloud-api" />
+        <module name="springcloud-provider-dept-8001-nacos" />
         <module name="Algorithms" />
         <module name="Mybatis01" />
         <module name="Mybatis02" />

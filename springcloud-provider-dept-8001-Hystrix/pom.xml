@@ -23,7 +23,7 @@
             <!--            <version>3.0.2</version>-->
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
-            <version>1.4.7.RELEASE</version>
+    <!--            <version>1.4.7.RELEASE</version>-->
         </dependency>
         <dependency>
             <groupId>com.hewen</groupId>
