@@ -40,6 +40,9 @@
         <log4j.version>1.2.17</log4j.version>
         <logback.version>1.2.3</logback.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <eureka.version>2.2.9.RELEASE</eureka.version>
+<!--        3.0.X版本不够稳定！！！！！-->
+<!--        eureka3.0.2不够稳定-->
     </properties>
     <dependencyManagement>
         <!--        management是管理，用的时候需要导入的，在子类里导入的默认就是我们这边定义的-->
@@ -48,7 +51,9 @@
                 <!--                SpringCloud的依赖-->
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>2020.0.2</version>
+                <!--                <version>2020.0.2</version>-->
+                <!--                是时候降低版本了-->
+                <version>Hoxton.SR12</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -57,7 +62,9 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.4.5</version>
+                <!--                <version>2.4.5</version>-->
+                <!--                是时候降低版本了-->
+                <version>2.3.12.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -129,8 +136,28 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-netflix-eureka-client</artifactId>
+                <version>${eureka.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+                <version>${eureka.version}</version>
+            </dependency>
+            <dependency>
+                <!--            <groupId>org.springframework.cloud</groupId>-->
+                <!--            <artifactId>spring-cloud-starter-netflix-eureka</artifactId>-->
+                <!--            <version>3.0.2</version>-->
+                <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-eureka-server</artifactId>
                 <version>1.4.7.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.7.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
