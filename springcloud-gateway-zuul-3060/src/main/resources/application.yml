@@ -24,8 +24,8 @@ zuul:
       path: /mydept/**
       # 如果只这么设置，其实不会影响原有的路由映射，但是如果加了下面的ignored-services，就会变成只路由开放的服务
       # 可以伪装域名和服务名，是很好的
-  ignored-services: '*' #不路由的服务路径
-  prefix: /hewen
+#  ignored-services: '*' #不路由的服务路径
+#  prefix: /hewen
   #公共的访问前缀
 #  host:
 #    connect-timeout-millis: 3000
