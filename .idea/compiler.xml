@@ -38,6 +38,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
+      <module name="maven-test" target="1.8" />
       <module name="springcloud-consumer-dept-8002" target="1.8" />
       <module name="springcloud-provider" target="1.5" />
     </bytecodeTargetLevel>

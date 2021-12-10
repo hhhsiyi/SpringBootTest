@@ -30,7 +30,13 @@ public class TestState {
             state=thread.getState();
             System.out.println(state);//输出状态
         }
-        thread.start();//这里会报错，因为死亡的线程无法再次启动了，相当于诈尸
+        try
+        {
+            thread.start();//这里会报错，因为死亡的线程无法再次启动了，相当于诈尸
+        }catch (Exception e){
+            e.printStackTrace();
+            System.out.println("被玩坏了");
+        }
 
     }
 }
