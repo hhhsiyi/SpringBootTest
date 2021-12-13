@@ -7,6 +7,15 @@ package com.hewen.thread.syn;
  * 最是人间留不住，朱颜辞镜花辞树
  */
 public class UnsafeBank {
+    public static void main(String[] args) {
+        Account cib = new Account(100, "CIB");
+
+        Drawing h = new Drawing(cib, 30, "何文");
+        Drawing l = new Drawing(cib, 100, "lsy");
+        h.start();
+        l.start();
+
+    }
 }
 
 class Account{
@@ -23,14 +32,20 @@ class Drawing extends Thread {
     Account account;//账户
     int drawingMoney;//取多少钱
     int nowMoney;
-    public Drawing(Account account,int drawingMoney,int nowMoney){
+    public Drawing(Account account,int drawingMoney,String threadName){
+        super(threadName);
         this.account=account;
         this.drawingMoney=drawingMoney;
-        this.nowMoney=nowMoney;
     }
 
     @Override
     public void run() {
+        try {
+            Thread.sleep(1000);
+            // sleep之后，就会放大线程的不安全的特性
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         if (account.money-drawingMoney<0){
             //钱不够
             System.out.println(Thread.currentThread().getName()+"钱不够，退出哦");
@@ -38,7 +53,7 @@ class Drawing extends Thread {
         }
         //余额=余额-取钱数
         account.money= account.money-drawingMoney;
-
+        nowMoney=nowMoney+drawingMoney;
         System.out.println("剩了这么多"+account.money);
 //        System.out.println(Thread.currentThread().getName());
         System.out.println(this.getName()+"手里的钱："+nowMoney);
