@@ -17,24 +17,26 @@ public class UnsafeList {
         ArrayList<String> list = new ArrayList<>();
         for (int i = 0; i < 10000; i++) {
             new Thread(() -> {
-                list.add(Thread.currentThread().getName());
+                synchronized (list) {
+                    list.add(Thread.currentThread().getName());
+                }
             }).start();
         }
-        Thread.sleep(3000);
+        Thread.sleep(10);
         System.out.println(list.size());
         //为什么输出不是10000呢，因为线程不安全，在同一时间，大家操作了同一个内存地址的东西
 
     }
     @Test
-    public void test01(){
-        new HashMap<String,String>()
+    public void test01() throws InterruptedException {
+        HashMap<String, String> stringStringHashMap = new HashMap<>();
         ArrayList<String> list = new ArrayList<>();
         for (int i = 0; i < 10000; i++) {
             new Thread(() -> {
-                list.add(Thread.currentThread().getName());
+                stringStringHashMap.put(Thread.currentThread().getName(),"第"+"个");
             }).start();
         }
-        Thread.sleep(3000);
-        System.out.println(list.size());
+        Thread.sleep(100);
+        System.out.println(stringStringHashMap.size());
     }
 }
