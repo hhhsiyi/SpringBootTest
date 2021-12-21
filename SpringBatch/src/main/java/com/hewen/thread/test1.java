@@ -13,14 +13,13 @@ public class test1 {
 //            Hewen hewen = new Hewen("h", 23);
 //            hewen1=hewen;
 //        }
-        hh(hewen1);
+        hewen1=new Hewen("hh",22);
+        hewen1 = hh(hewen1);
         System.out.println(hewen1);
     }
     public static Hewen hh(Hewen hewen1){
-        if (hewen1==null){
             Hewen hewen = new Hewen("h", 23);
             hewen1=hewen;
-        }
         return hewen1;
     }
 }
