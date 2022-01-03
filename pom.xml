@@ -28,6 +28,7 @@
         <module>springcloud-provider-dept-8001-nacos</module>
         <module>springcloud-nacos-example</module>
         <module>springcloud-gateway</module>
+        <module>redis-lock</module>
     </modules>
 
 
