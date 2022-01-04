@@ -1,5 +1,5 @@
 server:
-  port: 1102
+  port: 1101
 
 #spring:
 #  redis:
