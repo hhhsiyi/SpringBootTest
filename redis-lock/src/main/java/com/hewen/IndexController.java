@@ -51,7 +51,7 @@ public class IndexController {
                 return "Stock为空";
             }
 
-            redissonLock.lock(30,TimeUnit.SECONDS);//加一个watchDog类似的
+            redissonLock.lock(30, TimeUnit.SECONDS);//加一个watchDog类似的
             int stock = Integer.parseInt(getStock);
             if (stock > 0) {
                 int realStock = stock - 1;
