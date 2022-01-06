@@ -19,6 +19,8 @@ public class RedisLockApplication {
         SpringApplication.run(RedisLockApplication.class, args);
     }
 //nginx反向代理之后
+    //https://www.cnblogs.com/jiangwangxiang/p/8481661.html
+    //nginx反向代理网址学习
     @Bean
     public Redisson redisson() {
         Config config = new Config();
