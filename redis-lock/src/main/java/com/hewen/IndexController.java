@@ -1,5 +1,6 @@
 package com.hewen;
 
+import com.hewen.springcloud.pojo.RestResult;
 import org.redisson.Redisson;
 import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,5 +76,34 @@ public class IndexController {
         //redis的主从集群架构又得考虑别的问题，假如主里刚写好，主节点挂了，选了新的主节点出来，新的主节点里面就没有这个线程加的锁了
         //zookeeper内部的选举会保证数据的一致性，如果要求强一致性，我们可以选用zookeeper
         //redis的性能更牛逼
+    }
+//http://localhost/getHewenSequence
+    @RequestMapping("/getHewenSequence")
+    public int getHewenSequence(){
+        String hewenSequence = stringRedisTemplate.opsForValue().get("hewenSequence");
+        if (null==hewenSequence){
+            return 999999;
+        }else {
+            int a = Integer.parseInt(hewenSequence);
+            int b=a+1;
+            stringRedisTemplate.opsForValue().set("hewenSequence",b+"");
+            return a;
+        }
+    }
+
+    @RequestMapping("/getHewenSequence2")
+    public RestResult<Integer> getHewenSequence2(){
+        String hewenSequence = stringRedisTemplate.opsForValue().get("hewenSequence");
+        if (null==hewenSequence){
+            return new RestResult(999999);
+        }else {
+            int a = Integer.parseInt(hewenSequence);
+            int b=a+1;
+            stringRedisTemplate.opsForValue().set("hewenSequence",b+"");
+            RestResult<Integer> restResult = new RestResult<Integer>();
+            restResult.setCode(0);
+            restResult.setData(a);
+            return restResult;
+        }
     }
 }
