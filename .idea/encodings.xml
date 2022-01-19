@@ -4,7 +4,6 @@
     <file url="file://$PROJECT_DIR$/Algorithms/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Algorithms/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/DesignPatterns/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/DesignPatterns/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MyBatis/Mybatis01/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MyBatis/Mybatis01/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MyBatis/Mybatis02/src/main/java" charset="UTF-8" />
@@ -30,6 +29,7 @@
     <file url="file://$PROJECT_DIR$/springBootUtils/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springBootUtils/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-consumer-dept-80/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-consumer-dept-80/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-consumer-hystrix-dashboard/src/main/java" charset="UTF-8" />
