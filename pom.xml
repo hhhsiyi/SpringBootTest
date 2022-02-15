@@ -29,6 +29,7 @@
         <module>springcloud-nacos-example</module>
         <module>springcloud-gateway</module>
         <module>redis-lock</module>
+        <module>SpringBootElasticSearch</module>
     </modules>
 
 

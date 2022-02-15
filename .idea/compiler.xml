@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springBootUtils" />
         <module name="springcloud-gateway" />
+        <module name="SpringBootElasticSearch" />
         <module name="springcloud-gateway-zuul-3060" />
         <module name="SpringBatch" />
         <module name="springcloud-consumer-hystrix-dashboard" />
