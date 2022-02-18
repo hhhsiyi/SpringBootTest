@@ -189,13 +189,13 @@ public class SpringBootAppTest {
     //搜索请求、条件构造、高亮构造、精确查询
     @Test
     void testSearch() throws IOException {
-        SearchRequest searchRequest = new SearchRequest("hewen_test_doc");
+        SearchRequest searchRequest = new SearchRequest("jd_goods");
         //构建搜索的条件
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
         sourceBuilder.highlighter();
         //term精确匹配
         //matchAll匹配所有包括分词了的
-        TermQueryBuilder termQueryBuilder = QueryBuilders.termQuery("name", "hewen");
+        TermQueryBuilder termQueryBuilder = QueryBuilders.termQuery("name", "ps5");
         //中文查不出来需要把name改成name.keyword
         //可以使用queryBuilders快速构建匹配
 //        MatchAllQueryBuilder matchAllQueryBuilder = QueryBuilders.matchAllQuery();
