@@ -30,6 +30,7 @@
         <module>springcloud-gateway</module>
         <module>redis-lock</module>
         <module>SpringBootElasticSearch</module>
+        <module>MyBatisPlus</module>
     </modules>
 
 

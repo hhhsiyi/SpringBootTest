@@ -37,6 +37,7 @@
         <module name="Mybatis08" />
         <module name="springcloud-nacos-example" />
         <module name="Mybatis09" />
+        <module name="MyBatisPlus" />
         <module name="redis-lock" />
       </profile>
     </annotationProcessing>
