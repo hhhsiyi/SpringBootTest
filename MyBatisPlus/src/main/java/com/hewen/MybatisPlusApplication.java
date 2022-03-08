@@ -1,6 +1,5 @@
 package com.hewen;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,7 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 最是人间留不住，朱颜辞镜花辞树
  */
 //不是ComponetScan
-@MapperScan("com.hewen.mapper.UserMapper")
 @SpringBootApplication
 public class MybatisPlusApplication {
     public static void main(String[] args) {

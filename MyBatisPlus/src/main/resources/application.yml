@@ -4,5 +4,17 @@ spring:
     password: 19980928
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/mybatis?userSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+  profiles:
+    active: dev
 
 #    jdbc:mysql://localhost:3306/eesy_mybatis?userSSL=false&amp;serverTimezone=UTC
+#配置日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      #配置逻辑删除的情况
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+#    默认的控制台输出
