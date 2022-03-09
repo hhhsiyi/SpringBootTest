@@ -30,6 +30,7 @@
         <module name="Mybatis01" />
         <module name="Mybatis02" />
         <module name="Mybatis03" />
+        <module name="MyBatisPlusLowVersion" />
         <module name="Mybatis04" />
         <module name="Mybatis05" />
         <module name="Mybatis06" />

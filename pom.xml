@@ -31,6 +31,7 @@
         <module>redis-lock</module>
         <module>SpringBootElasticSearch</module>
         <module>MyBatisPlus</module>
+        <module>MyBatisPlusLowVersion</module>
     </modules>
 
 
