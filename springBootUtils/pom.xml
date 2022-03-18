@@ -40,6 +40,18 @@
             <version>3.141.59</version>
         </dependency>
 
+        <!--jsr 303-->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+<!--        &lt;!&ndash; hibernate validator&ndash;&gt;-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.0.20.Final</version>
+        </dependency>
     </dependencies>
 
     <properties>
