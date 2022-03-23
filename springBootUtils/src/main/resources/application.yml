@@ -6,4 +6,5 @@ server:
 #    password: 19980928
 #    url: jdbc:mysql://localhost:3306/eesy_mybatis?userSSL=false&serverTimezone=UTC
 #    driver-class-name: com.mysql.cj.jdbc.Driver
+#debug: true
 ##    type: com.alibaba.druid.pool.DruidDataSource
