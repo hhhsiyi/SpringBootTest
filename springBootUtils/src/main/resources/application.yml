@@ -8,3 +8,7 @@ server:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 #debug: true
 ##    type: com.alibaba.druid.pool.DruidDataSource
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379

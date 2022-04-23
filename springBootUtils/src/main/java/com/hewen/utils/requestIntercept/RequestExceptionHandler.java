@@ -59,12 +59,12 @@ public class RequestExceptionHandler {
         return CommonResult.error();
     }
 
-    @ExceptionHandler(MethodArgumentNotValidException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public CommonResult validationError(MethodArgumentNotValidException ex) {
-        FieldError fieldError = ex.getBindingResult().getFieldError();
-        logger.error(fieldError.getField()+fieldError.getDefaultMessage());
-//        return CommonResult.error(9999, fieldError.getField()+fieldError.getDefaultMessage());
-        return CommonResult.error();
-    }
+//    @ExceptionHandler(MethodArgumentNotValidException.class)
+//    @ResponseStatus(HttpStatus.BAD_REQUEST)
+//    public CommonResult validationError(MethodArgumentNotValidException ex) {
+//        FieldError fieldError = ex.getBindingResult().getFieldError();
+//        logger.error(fieldError.getField()+fieldError.getDefaultMessage());
+////        return CommonResult.error(9999, fieldError.getField()+fieldError.getDefaultMessage());
+//        return CommonResult.error();
+//    }
 }

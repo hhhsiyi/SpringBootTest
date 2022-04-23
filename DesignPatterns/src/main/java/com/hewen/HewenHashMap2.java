@@ -6,6 +6,7 @@ package com.hewen;
  * 云想衣裳花想容，春风拂槛露华浓
  * 最是人间留不住，朱颜辞镜花辞树
  */
+//哈希map hashmap源码探究
 public class HewenHashMap2<K, V> implements HewenMap<K, V> {
     private Entry<K, V> table[]=null;
     int CAPACITY = 16;

@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    username: root
+    password: 19980928
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vue?userSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
