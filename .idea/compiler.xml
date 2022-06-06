@@ -14,6 +14,7 @@
         <module name="SpringBatch" />
         <module name="springByOurself" />
         <module name="springcloud-consumer-hystrix-dashboard" />
+        <module name="DataStructures" />
         <module name="SpringBoot-Web" />
         <module name="springcloud-provider-dept-8001" />
         <module name="springcloud-provider-dept-8002" />

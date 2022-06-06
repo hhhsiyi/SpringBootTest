@@ -32,6 +32,7 @@
         <module>SpringBootElasticSearch</module>
         <module>MyBatisPlus</module>
         <module>MyBatisPlusLowVersion</module>
+        <module>DataStructures</module>
         <module>springByOurself</module>
         <module>SpringBoot-Web</module>
     </modules>
